@@ -4,7 +4,7 @@ import { courses, toppers, faqs } from "@/lib/mock-data";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { BookOpen, Trophy, Target, ArrowRight, UserCheck, CheckCircle2, Medal, Check } from "lucide-react";
+import { BookOpen, Trophy, Target, UserCheck, CheckCircle2, Medal, Check } from "lucide-react";
 
 export default function Home() {
   const onSubmitLead = (e: React.FormEvent) => {
@@ -131,7 +131,7 @@ export default function Home() {
           <SectionHeading title="Flagship Programs" subtitle="Find Your Path" />
           
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {courses.map((course, i) => (
+            {courses.map((course) => (
               <div key={course.id} className="group relative bg-white rounded-3xl p-8 border border-[#ddd] shadow-xl shadow-black/5 hover:shadow-2xl hover:border-[#1A1A2E]/20 transition-all duration-500 overflow-hidden flex flex-col">
                 <div className={`absolute top-0 left-0 w-full h-2 bg-gradient-to-r ${course.color}`} />
                 <div className="flex justify-between items-start mb-6">
@@ -254,7 +254,7 @@ export default function Home() {
           <SectionHeading title="Hall of Fame" subtitle="Our Pride" />
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {toppers.map((topper, i) => (
+            {toppers.map((topper) => (
               <div key={topper.id} className="group relative rounded-2xl overflow-hidden shadow-lg border border-border/50 aspect-[3/4]">
                 <img src={topper.image} alt={topper.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent flex flex-col justify-end p-4">

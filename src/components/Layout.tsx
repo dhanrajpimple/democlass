@@ -1,5 +1,6 @@
 import { Link, useLocation } from "wouter";
-import { ReactNode, useEffect } from "react";
+import { useEffect } from "react";
+import type { ReactNode } from "react";
 import { Phone, Mail, MapPin, Menu, X, ChevronRight, GraduationCap } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";

@@ -34,24 +34,24 @@ export default function Results() {
 
           <TabsContent value="all" className="mt-0">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-              {allResults.map((topper, i) => (
-                <ResultCard key={topper.id} topper={topper} index={i} />
+              {allResults.map((topper) => (
+                <ResultCard key={topper.id} topper={topper} />
               ))}
             </div>
           </TabsContent>
           
           <TabsContent value="neet" className="mt-0">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-              {allResults.filter(t => t.exam.includes("NEET")).map((topper, i) => (
-                <ResultCard key={topper.id} topper={topper} index={i} />
+              {allResults.filter(t => t.exam.includes("NEET")).map((topper) => (
+                <ResultCard key={topper.id} topper={topper} />
               ))}
             </div>
           </TabsContent>
 
           <TabsContent value="jee" className="mt-0">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-              {allResults.filter(t => t.exam.includes("JEE")).map((topper, i) => (
-                <ResultCard key={topper.id} topper={topper} index={i} />
+              {allResults.filter(t => t.exam.includes("JEE")).map((topper) => (
+                <ResultCard key={topper.id} topper={topper} />
               ))}
             </div>
           </TabsContent>
@@ -61,7 +61,7 @@ export default function Results() {
   );
 }
 
-function ResultCard({ topper, index }: { topper: any, index: number }) {
+function ResultCard({ topper }: { topper: any }) {
   return (
     <div 
       className="bg-white rounded-2xl overflow-hidden shadow-lg border border-[#ddd]/50 group"
